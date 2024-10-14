@@ -1,0 +1,16 @@
+services:
+  app:
+    container_name: reservations-api
+    restart: always
+    build: .
+    ports:
+      - '80:3000'
+    external_links:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/reservations
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
