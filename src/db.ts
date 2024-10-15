@@ -8,7 +8,7 @@ const dbUri = process.env.MONGO_URI || 'mongodb://localhost:27017/reservations';
 const MongoConnect = async () => {
     try {
         await mongoose.connect(dbUri);
-        seedDatabase()
+        seedDatabase();
       } catch (error) {
         console.error(error);
     }

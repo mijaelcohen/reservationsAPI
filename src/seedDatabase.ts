@@ -10,6 +10,7 @@ async function seedDatabase() {
   const amountOfUsers = 10;
   const amountOfStores = 5;
   const amountOfTables = 5;
+  
   try {
     await Users.deleteMany({});
     await UserPreferences.deleteMany({});

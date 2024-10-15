@@ -1,6 +1,5 @@
 import { Types } from 'mongoose';
 import { IStore, Stores } from '../models/store.schema';
-import { IUser } from '../models/user.schema';
 import { Reservations } from '../models/reservation.scehma';
 import moment from 'moment';
 
@@ -13,7 +12,6 @@ class StoreService {
         }else{
             return Stores.find()
         }
-        
     }
     
     create (store: IStore) {
