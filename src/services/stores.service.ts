@@ -91,7 +91,6 @@ class StoreService {
         
         return availableStores;
     }
-
 }
 
 const storeService = new StoreService() 

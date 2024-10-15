@@ -8,13 +8,11 @@ interface IStore {
         name: string
         _id : Types.ObjectId
     }]
-    reservations: Array<Schema.Types.ObjectId>
 }
 
 const StoreSchema = new Schema<IStore>({
     name: { type: String },
     preferences: [{type: Schema.Types.ObjectId, ref: 'UserPreferences'}],
-    reservations: [{type: Schema.Types.ObjectId, ref: 'Reservations'}],
     tables: [{
         capacity: { type: Number },
         name: { type: String },

@@ -44,7 +44,7 @@ async function seedDatabase() {
       }));
 
       const store = new Stores({
-        storeName: faker.company.name(),
+        name: faker.company.name(),
         preferences: getRandomPreferences(preferencesIDs),
         tables,
         reservations: []
